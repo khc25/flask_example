@@ -1,8 +1,9 @@
 **Install package**
 
     conda install flask
-
+    conda install urlparse
     conda install -c anaconda psycopg2
+
 
 
 **Start flask server**
