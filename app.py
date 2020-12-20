@@ -26,4 +26,5 @@ def hello_world():
 
 @app.route('/', methods=["GET"])
 def get():
-    cur.excute("SELECT * FROM test")
+    result = cur.excute("SELECT * FROM test")
+    return result
