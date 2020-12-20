@@ -15,4 +15,4 @@ conn = psycopg2.connect(
 )
 cur = conn.cursor()
 
-cur.execute("CREATE TABLE test (id serial PRIMARY KEY, usernmae varchar, password varchar);")
+cur.execute("CREATE TABLE test (id serial PRIMARY KEY, username varchar, password varchar);")
