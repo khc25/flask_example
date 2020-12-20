@@ -3,6 +3,7 @@ app = Flask(__name__)
 from flask import request
 import psycopg2
 import urlparse
+from flask import jsonify
 
 result = urlparse.urlparse("dbpostgres://obbyumtp:McdTVFblMMvaFMEgp9FaC44jS7j7ZwX1@suleiman.db.elephantsql.com:5432/obbyumtp")
 username = result.username
@@ -27,4 +28,4 @@ def hello_world():
 @app.route('/', methods=["GET"])
 def get():
     result = cur.excute("SELECT * FROM test")
-    return result
+    return jsonify(result)
